@@ -3,11 +3,26 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--<link rel="../bower_components/font-awesome.css" type="" href="">-->
     <!--bowerStyles-->
     <!--styles-->
 </head>
 <body>
-<div class="container" ng-view></div>
+    <div class="nav-bar container">
+        <ul>
+            <li><a href="/#/"><i class="fa fa-home" aria-hidden="true"></i></a></li>
+            <li><a href="https://www.google.com" target="_blank"><i class="fa fa-google" aria-hidden="true"></i></a></li>
+        </ul>
+    </div>
+    <div class="container" ng-view></div>
+    <footer>
+        <div class="nav-bar container">
+            <ul>
+                <li>Oleg</li>
+                <li><a href="https://github.com/kuwkuw/angular-browserify-seed">Fork</a></li>
+            </ul>
+        </div>        
+    </footer>
 <!--scripts-->
 <!--config-->
 </body>

@@ -1,0 +1,12 @@
+<div class="photo-list clearfix">
+    <div class="photo-conteiner" ng-repeat="photo in albomCtrl.viewedPhotos">
+        <div class="photo-info">
+            <a href="/#/photo/{{photo.id}}">
+                <img ng-src="{{photo.thumbnailUrl}}" alt="{{photo.title}}">
+            </a>       
+            <div class="photo-title">
+                {{photo.title}}
+            </div>
+        </div>        
+    </div>
+</div>

@@ -1,0 +1,16 @@
+<h1>Photos list</h1>
+<div class="photo-list clearfix">
+  <div class="photo-conteiner" ng-repeat="photo in photosCtrl.viewedPhotos">
+    <div class="pho-info">
+      <a href="/#/photo/{{photo.id}}">
+        <img ng-src="{{photo.thumbnailUrl}}" alt="{{photo.title}}">
+      </a>
+      <div class="photo-title">
+        {{photo.title}}
+      </div>
+      <div>
+        <a href="/#/albom/{{photo.albumId}}">To albom</a>
+      </div>
+    </div>
+  </div>
+</div>

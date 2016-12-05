@@ -15,7 +15,8 @@ module.exports =
         require('../common').name,
 
         // modules
-        require('./foo').name
+        require('./foo').name,
+        require('./photos').name
     ])
         .config(/*@ngInject*/ function ($translateProvider) {
             $translateProvider.preferredLanguage('en');

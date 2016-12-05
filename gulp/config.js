@@ -7,10 +7,18 @@ global.config = {
     paths: {
         src: {
             index: SRC_FOLDER + '/index.html',
-            assets: [SRC_FOLDER + '/assets/**/*', '!' + SRC_FOLDER + '/assets/images/**/*'],
+            assets: [
+                    SRC_FOLDER + '/assets/**/*', 
+                    '!' + SRC_FOLDER + '/assets/images/**/*'
+                ],
+            fonts: ['bower_components/font-awesome/fonts/*'],
             images: SRC_FOLDER + '/assets/images/**/*',
             scripts: SRC_FOLDER + '/modules/**/*.js',
-            bowerStyles: ['bower_components/**/*.min.css', "bower_components/material-date-picker/app/styles/mbdatepicker.css"],
+            bowerStyles: [
+                    'bower_components/**/*.min.css', 
+                    'bower_components/material-date-picker/app/styles/mbdatepicker.css'/*, 
+                    'bower_components/font-awesome/css/font-awesome.min.css'*/
+                ],
             styles: SRC_FOLDER + '/styles/app.scss',
             stylesGlob: SRC_FOLDER + '/styles/**/*.scss',
             templates: SRC_FOLDER + '/modules/**/*.html',
@@ -26,6 +34,7 @@ global.config = {
                 scripts: BUILD_FOLDER,
                 images: BUILD_FOLDER + '/assets/images',
                 assets: BUILD_FOLDER + '/assets',
+                fonts: BUILD_FOLDER + '/fonts',
                 index: BUILD_FOLDER,
                 server: BUILD_FOLDER
             },
@@ -34,6 +43,7 @@ global.config = {
                 scripts: RELEASE_FOLDER,
                 images: RELEASE_FOLDER + '/assets/images',
                 assets: RELEASE_FOLDER + '/assets',
+                fonts: BUILD_FOLDER + '/fonts',
                 index: RELEASE_FOLDER,
                 server: RELEASE_FOLDER
             }
