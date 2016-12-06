@@ -1,15 +1,14 @@
-<h1>Photos list</h1>
-<div class="photo-list clearfix">
+<div class="photo-list clearfix" scrolled="photosCtrl.addPhotos()">
   <div class="photo-conteiner" ng-repeat="photo in photosCtrl.viewedPhotos">
-    <div class="pho-info">
+    <div class="photo-info">
       <a href="/#/photo/{{photo.id}}">
         <img ng-src="{{photo.thumbnailUrl}}" alt="{{photo.title}}">
       </a>
       <div class="photo-title">
         {{photo.title}}
       </div>
-      <div>
-        <a href="/#/albom/{{photo.albumId}}">To albom</a>
+      <div class="to-albom-link">
+        <a href="/#/albom/{{photo.albumId}}">To albom <i class="fa fa-object-group" aria-hidden="true"></i></a>
       </div>
     </div>
   </div>

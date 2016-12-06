@@ -5,18 +5,19 @@ module.exports = /*@ngInject*/
         var vm = this;
         vm.viewedPhotos = [];
         var photos = [];
+        vm.addPhotos = addPhotos;
 
         (function () {
             photosService
                 .getAllPhotos()
                 .then(function (data) {
                     photos = data;
-                    addMore();
+                    vm.addPhotos();
                 });
         })();
 
-        function addMore () {
+        function addPhotos () {
             var itemshowedCount = vm.viewedPhotos.length;
-            vm.viewedPhotos = vm.viewedPhotos.concat(photos.slice(itemshowedCount, itemshowedCount + 10));
+            vm.viewedPhotos = vm.viewedPhotos.concat(photos.slice(itemshowedCount, itemshowedCount + 9));
         }
     };
